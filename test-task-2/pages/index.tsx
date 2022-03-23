@@ -10,9 +10,8 @@ import ResultsBlock from '../components/ResultsBlock';
 import { questions } from '../data';
 import { IQuestion } from '../types';
 
-const questionsItems = questions.sort(() => Math.random() - 0.5);
-
 const Home: NextPage = () => {
+  const questionsItems = questions.sort(() => Math.random() - 0.5);
   const [quizFinished, setQuizFinished] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
   const totalQuestion = questionsItems.length - 1;
